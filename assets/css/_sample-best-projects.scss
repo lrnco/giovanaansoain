@@ -1,0 +1,67 @@
+.sample-best-projects{
+	text-align: center;
+}
+
+.list-filter-projects{
+	display: inline-flex;
+
+	@media screen and (max-width: $screen-xs-max){
+      flex-wrap: wrap;
+
+      .item-filter-projects{
+      	width: 50%;
+      	margin-bottom: 10px;
+      }
+    }
+}
+
+.item-filter-projects + .item-filter-projects{
+	margin-left: 20px;
+
+	@media screen and (max-width: $screen-xs-max){
+		margin-left: 0;
+	}
+}
+
+.item-filter-projects>a{
+	font-family: $montserrat;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 2.4px;
+	text-align: center;
+	text-transform: uppercase;
+	color: $color-subtitle;
+}
+
+.item-filter-projects.active>a{
+	color: #db2c1f;
+}
+
+.wrapper-projects{
+	display: flex;
+    flex-flow: row wrap;
+    margin: 25px 0;
+
+    a{
+    	flex: 0 1 33.3%;
+
+    	@media only screen and (max-width: $screen-xs-max){
+			flex: 0 1 50%;
+		}
+    }
+
+    .projects{
+    	display: grid;
+    }
+
+    .projects>img {
+    	width: 100%;
+	    height: 330px;
+	    object-fit: cover;
+	    display: grid;
+
+	    @media only screen and (max-width: $screen-xs-max){
+			height: auto;
+		}
+	}
+}

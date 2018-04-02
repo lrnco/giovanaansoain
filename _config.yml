@@ -1,0 +1,30 @@
+---
+title: Giovana Ansoain
+timezone: UTC
+collections:
+  pages:
+    title: Pages
+    output: true
+  posts:
+    title: Posts
+    output: true
+  projects:
+    title: Projects
+    output: true
+email: ola@giovana.cc
+description: Giovana Ansoain Portfolio
+baseurl: ''
+url: ''
+email: ola@giovana.cc
+description: Giovana Ansoain Portfolio
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" 
+markdown: kramdown
+plugins:
+  - jekyll-feed
+sass:
+  sass_dir: "/assets/css"
+  style: compressed
+exclude:
+- Gemfile
+- Gemfile.lock

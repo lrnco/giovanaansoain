@@ -1,0 +1,20 @@
+.call-to-action{
+	background: $color-red;
+	text-align: center;
+}
+
+.title-cta{
+	font-family:  $montserrat;
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
+	color: #fefefe;
+
+	@media only screen and (min-width: $screen-sm) and (max-width: $screen-sm-max){
+		font-size: 25px;
+	}
+
+	@media only screen and (max-width: $screen-xs-max){
+		font-size: 20px;
+	}
+}
