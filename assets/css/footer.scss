@@ -59,10 +59,6 @@
 	@media screen and (max-width: $screen-xs-max) {
 		max-width: 100%;
 	}
-
-	.item-map{
-		margin-bottom: 15px;
-	}
 }
 
 .list-map-site + .list-map-site{
@@ -89,17 +85,19 @@
 	font-family: $montserrat;
 	font-size: 13px;
 	letter-spacing: 1px;
+	line-height: 2.15;
 	text-transform: uppercase;;
 }
 
 .list-map-site:nth-child(3){
 	font-family: $montserrat;
-	font-size: 14px;
+	font-size: 16px;
 	letter-spacing: 1.3px;
+	line-height: 5.63;
 
-	.item-map{
+	/*.item-map{
 		margin-bottom: 30px;
-	}
+	}*/
 }
 
 .logo-map{

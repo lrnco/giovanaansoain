@@ -16,7 +16,7 @@
 }
 
 .item-filter-projects + .item-filter-projects{
-	margin-left: 20px;
+	margin-left: 25px;
 
 	@media screen and (max-width: $screen-xs-max){
 		margin-left: 0;
@@ -40,7 +40,11 @@
 .wrapper-projects{
 	display: flex;
     flex-flow: row wrap;
-    margin: 25px 0;
+    margin: 60px 0;
+
+    @media only screen and (max-width: $screen-sm-max){
+		margin: 25px 0;
+	}
 
     a{
     	flex: 0 1 33.3%;

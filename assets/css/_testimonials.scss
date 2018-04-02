@@ -3,7 +3,7 @@
 }
 
 .box-content{
-	width: 350px;
+	width: 400px;
 	margin: 0 auto;
 
 	@media screen and (max-width: $screen-sm-max) {
@@ -32,8 +32,8 @@
 
 .text-slider{
 	font-family: $lora;
-	font-size: 16px;
-	line-height: 1.70;
+	font-size: 18px;
+	line-height: 1.78;
 
 	@media only screen and (max-width: $screen-sm-max){
 		font-size: 14px;
@@ -59,16 +59,16 @@
 
 .info-name{
 	font-family: $montserrat;
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: 600;
 	line-height: 2.29;
-	letter-spacing: 2px;
+	letter-spacing: 2.8px;
 	text-transform: uppercase;
 }
 
 .info-role{
 	font-family: $lora;
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: normal;
 	font-style: italic;
 	line-height: 2;

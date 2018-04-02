@@ -35,8 +35,13 @@ body {
 }
 
 section{
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @media only screen and (max-width: $screen-sm-max){
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 section.banner{
@@ -46,11 +51,11 @@ section.banner{
 /*text*/
 .section-title{
   font-family: $montserrat;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
   color: $color-title;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 
   @media only screen and (min-width: $screen-sm) and (max-width: $screen-sm-max){
     font-size: 30px;
@@ -65,7 +70,7 @@ section.banner{
 
 .section-subtitle{
   font-family: $lora;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.75;
   text-align: center;
   color: $color-subtitle;
@@ -85,22 +90,23 @@ section.banner{
 [class^="btn-"]{
 	display: inline-block;
 	font-family: $montserrat;
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: bold;
 	line-height: normal;
-	letter-spacing: 2px;
+	letter-spacing: 4.2px;
 	text-align: center;
   text-transform: uppercase;
 	color: $color-white;
-	width: 150px;
+	width: 190px;
 	height: 40px;
-  padding: 12px 0;
+  padding: 10px 0;
 	border-bottom-left-radius: 40px;
   border-top-left-radius: 40px;
   border-bottom-right-radius: 40px;
   border-top-right-radius: 40px;
 
   @media screen and (max-width: $screen-xs-max){
+    font-size: 13px;
     letter-spacing: 1.5px;
     width: 140px;
   }
@@ -111,7 +117,7 @@ section.banner{
 }
 
 .btn-secondary{
-  background-color: $color-brown;
+  background-color: $color-black;
   opacity: 0.8;
 }
 
@@ -131,9 +137,9 @@ section.banner{
 
   p{
     font-family: $montserrat;
-    font-size: 10px;
-    line-height: 4;
-    letter-spacing: 3px;
+    font-size: 12px;
+    line-height: 7.5;
+    letter-spacing: 4.8px;
     text-align: center;
     text-transform: uppercase;
     color: $color-white;

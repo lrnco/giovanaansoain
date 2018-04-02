@@ -20,7 +20,7 @@
 
 .banner-title{
 	font-family: $montserrat;
-	font-size: 50px;
+	font-size: 70px;
 	font-weight: bold;
 	line-height: normal;
 	text-align: center;
@@ -38,7 +38,7 @@
 
 .banner-subtitle{
 	font-family: $lora;
-	font-size: 20px;
+	font-size: 22px;
 	line-height: normal;
 	text-align: center;
 	color: $color-white;
@@ -87,9 +87,13 @@
 	align-items: flex-end;
 	justify-content: space-between;
 
+	@media screen and (min-width: $screen-xlg){
+		bottom: 90px;
+	}
+
 	a{
 		font-family: $montserrat;
-		font-size: 14px;
+		font-size: 16px;
 		letter-spacing: normal;
 		text-align: left;
 		color: $color-white;
