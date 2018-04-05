@@ -74,15 +74,18 @@ section.banner{
   line-height: 1.75;
   text-align: center;
   color: $color-subtitle;
-  width: 540px;
   margin: 0 auto 40px auto;
 
   @media only screen and (max-width: $screen-sm-max){
     font-size: 15px;
   }
 
+  @media screen and (min-width: $screen-sm){
+    width: 62%;
+  }
+
   @media screen and (max-width: $screen-xs-max){
-    width: 90%;
+    width: 85%;
   }
 }
 
@@ -124,7 +127,7 @@ section.banner{
 .btn-cta{
   background: #df4236;
   margin-top: 20px;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4588235294117647);
+  box-shadow: 2px 4px 10px #b5241a;
 }
 
 .wrapper-btn-scroll{
