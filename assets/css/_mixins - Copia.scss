@@ -1,0 +1,20 @@
+@mixin bg($path, $size: contain){
+	background-image: url($path);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: $size;
+}
+
+@mixin cover(){
+	background: no-repeat center center;
+	background-size: cover;
+}
+
+@mixin ir($path, $size){
+	@include bg($path, $size);
+	@include ti;
+}
+
+@mixin ti(){
+	text-indent: -9999px;
+}
