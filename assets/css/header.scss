@@ -30,7 +30,7 @@ header{
     .logo{
         display: block;
         @include ir('../img/logo.svg', contain);
-        width: 93px;
+        width: 92px;
         height: 40px;
 
         @media screen and (max-width: $screen-sm-max){
