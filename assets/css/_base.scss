@@ -4,7 +4,15 @@ html, body {
 }
 
 body {
-  min-height: calc(100vh - 90px);
+  min-height: calc(100vh - 75px);
+
+  @media screen and (min-width: $screen-md) and (max-width: $screen-xlg-max){
+    min-height: calc(100vh - 60px);
+  }
+
+  @media screen and (max-width: $screen-sm-max){
+    min-height: calc(100vh - 40px);
+  }
 }
 
 ::-moz-selection {
@@ -26,8 +34,12 @@ body {
 }
 
 .container {
-  width: 75%;
+  width: 1175px;
   margin: 0 auto;
+
+  @media screen and (min-width: $screen-md) and (max-width: $screen-md-max){
+    width: 80%;
+  }
 
   @media only screen and (max-width: $screen-sm-max){
     width: 90%;
@@ -38,9 +50,14 @@ section{
   padding-top: 120px;
   padding-bottom: 120px;
 
+  @media screen and (min-width: $screen-md) and (max-width: $screen-md-max){
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   @media only screen and (max-width: $screen-sm-max){
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -57,8 +74,14 @@ section.banner{
   color: $color-title;
   margin-bottom: 30px;
 
+  @media screen and (min-width: $screen-md) and (max-width: $screen-md-max){
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
   @media only screen and (min-width: $screen-sm) and (max-width: $screen-sm-max){
     font-size: 30px;
+    margin-bottom: 20px;
   }
 
   @media screen and (max-width: $screen-xs-max){
@@ -76,11 +99,19 @@ section.banner{
   color: $color-subtitle;
   margin: 0 auto 40px auto;
 
+  @media screen and (min-width: $screen-md) and (max-width: $screen-md-max){
+      font-size: 16px;
+  }
+
   @media only screen and (max-width: $screen-sm-max){
     font-size: 15px;
   }
 
   @media screen and (min-width: $screen-sm){
+    width: 635px;
+  }
+
+  @media screen and (min-width: $screen-sm) and (max-width: $screen-sm-max){
     width: 62%;
   }
 
@@ -108,10 +139,11 @@ section.banner{
   border-bottom-right-radius: 40px;
   border-top-right-radius: 40px;
 
-  @media screen and (max-width: $screen-xs-max){
+  @media screen and (max-width: $screen-md-max){
     font-size: 13px;
-    letter-spacing: 1.5px;
-    width: 140px;
+    letter-spacing: 2.8px;
+    width: 160px;
+    padding: 12px 0;
   }
 }
 
@@ -134,7 +166,6 @@ section.banner{
   text-align: center;
 
   @media screen and (max-width: $screen-xs-max){
-    width: 100px;
     display: none;
   }
 
@@ -147,9 +178,10 @@ section.banner{
     text-transform: uppercase;
     color: $color-white;
 
-    @media screen and (max-width: $screen-xs-max){
-      line-height: 2;
-      letter-spacing: 2px;
+    @media screen and (max-width: $screen-md-max){
+      font-size: 11px;
+      line-height: 4;
+      letter-spacing: 4px;
     }
   }
 }

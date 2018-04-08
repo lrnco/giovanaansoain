@@ -1,6 +1,7 @@
 .wrapper-cooperation-projects{
 	display: flex;
     flex-flow: row wrap;
+    justify-content: center;
 
     .cooperation-projects {
     	display: grid;
@@ -10,7 +11,8 @@
     }
 
     .cooperation-img {
-    	height: auto;
+        width: 100%;
+    	height: 190px;
         object-fit: cover;
         display: grid;
 	}
