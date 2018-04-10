@@ -15,10 +15,6 @@ email: ola@giovana.cc
 description: Giovana Ansoain Portfolio
 baseurl: ''
 url: ''
-email: ola@giovana.cc
-description: Giovana Ansoain Portfolio
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" 
 markdown: kramdown
 plugins:
   - jekyll-feed
