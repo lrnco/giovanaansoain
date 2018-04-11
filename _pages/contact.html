@@ -1,0 +1,72 @@
+---
+layout: default
+title: Contato
+permalink: /contact/
+---
+<main class="contact">
+	<!-- banner -->
+	<section class="banner banner-pages">
+		<img class="banner-img" src="{{ site.baseurl }}/assets/img/header-img.jpg" alt="banner">
+		<div class="banner-wrapper-info">
+			<div class="banner-box-center">
+				<h2 class="banner-title">Vamos nos conectar</h2>
+				<p class="banner-subtitle">Sempre bom começar um bom papo e conhecer gente nova. Vamos conversar?</p>
+			</div>
+			<div class="banner-box-bottom">
+				<a href="mailto:ola@giovana.cc">{{ site.email }}</a>
+				<a href="tel:+5511976757107">+55 11 97675 7107</a></li>
+			</div>
+		</div>
+	</section>
+	<section class="contact-content container">
+		<div class="contact-info">
+			<div class="item-contact-info">
+				<a href="tel:+5511976757107">
+					<img src="{{ site.baseurl }}/assets/icons/phone.svg" alt="">
+					<p>+55 11 97675 7107</p>
+				</a>
+			</div>
+			<div class="item-contact-info">
+				<a href="mailto:ola@giovana.cc">
+					<img src="{{ site.baseurl }}/assets/icons/email.svg" alt="">
+					<p>{{ site.email }}</p>
+				</a>
+			</div>
+			<div class="item-contact-info">
+				<a href="tel:+5511976757107">
+					<img src="{{ site.baseurl }}/assets/icons/location.svg" alt="">
+					<p>São Paulo, SP - Brasil</p>
+				</a>
+			</div>
+		</div>
+		<div class="contact-form">
+			<form class="form">
+				<div class="row wrapper-box">
+					<div class="box-contact">
+						<input type="text" class="mod-input" name="email" placeholder="Nome*" arial-label="Nome">
+					</div>
+					<div class="box-contact">
+						<input type="text" class="mod-input f-name" name="phone" placeholder="Telefone*" arial-label="Telefone">
+					</div>
+					<div class="box-contact">
+						<input type="text" class="mod-input" name="email" placeholder="Email*" arial-label="Email">
+					</div>
+				</div>
+				<div class="row">
+					<label class="mod-label">Mensagem</label>
+					<textarea class="mod-textarea" name="text"></textarea>
+				</div>
+				<div class="row wrapper-button">
+					<button class="btn-primary">Enviar</button>
+				</div>
+			</form>
+			<div class="success">
+				<p>
+					Sua mensagem foi enviada com sucesso
+					<br>Em breve retornaremos
+					<br>:)
+				</p>
+			</div>
+		</div>
+	</section>
+</main>

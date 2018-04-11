@@ -18,3 +18,10 @@
 @mixin ti(){
 	text-indent: -9999px;
 }
+
+@mixin placeColor($color: inherit){
+	&::-webkit-input-placeholder { color: $color; }
+	&:-moz-placeholder { color: $color; }
+	&::-moz-placeholder { color: $color; }
+	&:-ms-input-placeholder { color: $color; }
+}

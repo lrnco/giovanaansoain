@@ -1,0 +1,192 @@
+.contact{
+
+	.contact-info{
+		display: flex;
+	    justify-content: space-around;
+	    align-items: flex-end;
+		padding-bottom: 120px;
+
+		@media screen and (min-width: $screen-md) and (max-width: $screen-md-max){
+		    padding-bottom: 60px;
+		}
+
+		@media only screen and (max-width: $screen-sm-max){
+		    padding-bottom: 40px;
+		}
+	}
+
+	.contact-form{
+		padding-top: 120px;
+
+		@media screen and (min-width: $screen-md) and (max-width: $screen-md-max){
+		    padding-top: 60px;
+		}
+
+		@media only screen and (max-width: $screen-sm-max){
+		    padding-top: 40px;
+		}
+	}
+
+	.item-contact-info{
+		text-align: center;
+
+		img{
+			height: 70px;
+			margin-bottom: 40px;
+		}
+
+		p{
+			font-family: $montserrat;
+			font-size: 16px;
+			font-weight: 300;
+			color: #666666;
+		}
+	}
+
+	.btn-primary{
+		float: right;
+	}
+}
+
+.row{
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $screen-md) and (max-width: $screen-md-max){
+    	margin-bottom: 40px;
+	}
+
+	@media only screen and (max-width: $screen-sm-max){
+    	margin-bottom: 20px;
+	}
+}
+
+.row.wrapper-button{
+	display: flex;
+    justify-content: flex-end;
+}
+
+.wrapper-box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.box-contact{
+    width: 30%;
+}
+
+.mod-label{
+	font-family: $lora;
+    font-size: 18px;
+	color: #a7a7a7;
+}
+
+.mod-textarea{
+    position: relative;
+    width: 100%;
+    font-family: $lora;
+    font-size: 18px;
+    line-height: 2.2;
+    border: none;
+    border-bottom: 1px solid #a7a7a7;
+    height: 100px;
+    resize: none;
+    background: transparent;
+    color: #db2c1f;
+    @include placeColor(#a7a7a7);
+
+    &::-webkit-input-placeholder {
+
+        font-size: 18px;
+    }
+    &::-moz-placeholder {
+
+        font-size: 18px;
+    }
+    &:-ms-input-placeholder {
+
+        font-size: 18px;
+    }
+    &:-moz-placeholder {
+
+        font-size: 18px;
+    }
+}
+
+.mod-textarea:focus{
+	border-color: #db2c1f;
+}
+
+.mod-input{
+	font-family: $lora;
+    width: 100%;
+    font-size: 18px;
+    line-height: 2.2;
+    border: none;
+    border-bottom: 1px solid #a7a7a7;
+    background: transparent;
+    color: #db2c1f;
+    @include placeColor(#a7a7a7);
+
+    &.error{
+        color: red;
+
+        @include placeColor(red);
+    }
+
+    &::-webkit-input-placeholder {
+
+        font-size: 18px;
+        padding-left: 1px;
+    }
+    &::-moz-placeholder {
+
+        font-size: 18px;
+        padding-left: 1px;
+    }
+    &:-ms-input-placeholder {
+
+        font-size: 18px;
+        padding-left: 1px;
+    }
+    &:-moz-placeholder {
+
+        font-size: 18px;
+        padding-left: 1px;
+    }
+}
+
+.mod-input:focus{
+	border-color: #db2c1f;
+}
+
+span.error{
+    font-size: 10px;
+    color: red;
+    bottom: -20px;
+    left: 0px;
+    display: block;
+}
+
+.success{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    padding: 30px 35px;
+    background: #FFF;
+    display: none;
+
+    p{
+        width: 96%;
+        color: #808080;
+        font-size: 20px;
+        line-height: 30px;
+        opacity: 1;
+        text-align: center;
+        position: absolute;
+        top: 45%;
+    }
+}
