@@ -11,13 +11,16 @@ collections:
   projects:
     title: Projects
     output: true
+  uploads:
+    title: Uploads
+    output: true
 email: ola@giovana.cc
 description: Giovana Ansoain Portfolio
 baseurl: ''
 url: ''
 markdown: kramdown
 plugins:
-  - jekyll-feed
+- jekyll-feed
 sass:
   sass_dir: "/assets/css"
   style: compressed
