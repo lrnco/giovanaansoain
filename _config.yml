@@ -11,11 +11,9 @@ collections:
   projects:
     title: Projects
     output: true
-  upload:
+  uploads:
     title: Uploads
     output: true
-tag:
-  title: brading
 email: ola@giovana.cc
 description: Giovana Ansoain Portfolio
 meta_description: "Desenvolvedor Front-end/Wordpress, Design Responsivo, HTML5, CSS3 e JavaScript"
@@ -24,7 +22,7 @@ baseurl: ''
 url: ''
 markdown: kramdown
 plugins:
-  - jekyll-feed
+- jekyll-feed
 sass:
   sass_dir: "/assets/css"
   style: compressed
