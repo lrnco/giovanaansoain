@@ -1,16 +1,16 @@
 ---
 title: Projeto x
-subtitle: "Como melhorar meu SEO?"
 permalink: projetox
+tags:
+- branding
+- digital
+subtitle: Como melhorar meu SEO?
 layout: project
 image: projetox.jpg
 period: Agosto - Novembro, 2016
 client: Media Group
 city: New York
 type: latest
-tags:
-- branding
-- digital
 ---
 
 ![alt text](./upload/projetox.jpg "Tela a")
