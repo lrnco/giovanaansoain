@@ -1,35 +1,4 @@
-.project-info{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-}
-
-.project-info-item{
-    max-width: 30%;
-}
-
-.project-info-title{
-    font-family: $montserrat;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 6;
-    color: #a7a7a7;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-}
-
-.project-info-text{
-    font-family: $lora;
-    font-size: 18px;
-    line-height: 30px;
-    color: #3d3d3d;
-    text-align: center;
-}
-
 .project-single{
-
-    padding: 0 40px;
 
     @media screen and (min-width: $screen-sm) and (max-width: $screen-sm-max){
         padding: 0 15px;
@@ -45,9 +14,53 @@
         line-height: 30px;
         color: #3d3d3d;
         text-align: left;
+        margin-bottom: 120px;
 
         img{
             width: 100%;
         }
+
+        @media screen and (min-width: $screen-md) and (max-width: $screen-md-max){
+            margin-bottom: 60px;
+        }
+
+        @media only screen and (max-width: $screen-sm-max){
+            margin-bottom: 40px;
+        }
     }
+
+    p:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.project-info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.project-info-item{
+    max-width: 30%;
+
+    p{
+        text-align: center;  
+    }
+}
+
+.project-info-title{
+    font-family: $montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 6;
+    color: #a7a7a7;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.project-info-text{
+    font-family: $lora;
+    font-size: 18px;
+    line-height: 30px;
+    color: #3d3d3d;
 }

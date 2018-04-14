@@ -1,13 +1,15 @@
-{% include header.html %}
+ {%- include head.html -%}
 
+ <body>
+{%- include header.html -%}
 <!-- banner -->
-{% include project-header.html %}
+{% include project-banner.html %}
 <!-- info project -->
 {% include project-info.html %}
+<section class="project-single container">
 <!-- project -->
-<main class="project-single">
   {{ content }}
-</main>
+</section>
 <!-- related project -->
 
 {% include footer.html %}

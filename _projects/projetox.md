@@ -3,21 +3,20 @@ title: Projeto x
 subtitle: "Como melhorar meu SEO?"
 permalink: projetox
 layout: project
-image: 101-thumb.jpg
-date: Agosto - Novembro, 2016
+image: projetox.jpg
+period: Agosto - Novembro, 2016
 client: Media Group
 city: New York
+type: latest
 tags:
 - branding
 - digital
 ---
 
+![alt text](./upload/projetox.jpg "Tela a")
+
 A platform to connect those who cook to those who wants to eat well. Cook that cake, pie, cookies, the secret recipe of your family, or your healthy meal and earn money by selling to those who do not want to spend money eating in restaurants. It is easy and practical and you can also help your neighbors. [www.101chefs.com.br](www.101chefs.com.br)
 
-![alt text](./uploads/101-a.jpg "Tela a")
+![alt text](./upload/projetox.jpg "Tela a")
 
-![alt text](./uploads/101-b.jpg "Tela b")
-
-![alt text](./uploads/101-c.jpg "Tela c")
-
-![alt text](./uploads/101-d.jpg "Tela d")
+A platform to connect those who cook to those who wants to eat well. Cook that cake, pie, cookies, the secret recipe of your family, or your healthy meal and earn money by selling to those who do not want to spend money eating in restaurants. It is easy and practical and you can also help your neighbors. [www.101chefs.com.br](www.101chefs.com.br)
