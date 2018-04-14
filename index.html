@@ -70,46 +70,51 @@ title: Home
 		</ul>
 
 		<div class="wrapper-projects">
-			<a href="" class="a">
+		{% assign projects = site.projects | sort: 'order' %}
+	    {% for project in projects %}
+	      	{% if project.type == 'latest' %}
+			<a href="{{ site.baseurl }}/{{ project.permalink }}" class="a">
 				<div class="projects">
-					<img src="{{ site.baseurl }}/assets/img/teste2.png" alt="">
+					<img src="{{ site.baseurl }}/upload/{{ project.image }}" alt="">
 					<div class="wrapper-title-projects">
-						<p class="title-project">Engajar alunos dentro e fora de sala de aula</p>	
+						<p class="title-project">{{ project.title }}</p>	
 					</div>
 				</div>
 			</a>
-			<a href="" class="b">
+			<a href="{{ site.baseurl }}/{{ project.permalink }}" class="b">
 				<div class="projects">
-					<img src="{{ site.baseurl }}/assets/img/teste.jpg" alt="">
+					<img src="{{ site.baseurl }}/upload/{{ project.image }}" alt="">
 					<div class="wrapper-title-projects">
-						<p class="title-project">Otimizar a comunicação</p>	
+						<p class="title-project">{{ project.title }}</p>	
 					</div>
 				</div>
 			</a>
-			<a href="" class="c">
+			<a href="{{ site.baseurl }}/{{ project.permalink }}" class="c">
 				<div class="projects">
-					<img src="{{ site.baseurl }}/assets/img/teste2.png" alt="">
+					<img src="{{ site.baseurl }}/upload/{{ project.image }}" alt="">
 					<div class="wrapper-title-projects">
-						<p class="title-project">Otimizar a comunicação</p>	
+						<p class="title-project">{{ project.title }}</p>	
 					</div>
 				</div>
 			</a>
-			<a href="" class="d">
+			<a href="{{ site.baseurl }}/{{ project.permalink }}" class="d">
 				<div class="projects">
-					<img src="{{ site.baseurl }}/assets/img/teste2.png" alt="">
+					<img src="{{ site.baseurl }}/upload/{{ project.image }}" alt="">
 					<div class="wrapper-title-projects">
-						<p class="title-project">Otimizar a comunicação</p>	
+						<p class="title-project">{{ project.title }}</p>	
 					</div>
 				</div>
 			</a>
-			<a href="" class="e">
+			<a href="{{ site.baseurl }}/{{ project.permalink }}" class="e">
 				<div class="projects">
-					<img src="{{ site.baseurl }}/assets/img/teste.jpg" alt="">
+					<img src="{{ site.baseurl }}/upload/{{ project.image }}" alt="">
 					<div class="wrapper-title-projects">
-						<p class="title-project">Otimizar a comunicação</p>	
+						<p class="title-project">{{ project.title }}</p>	
 					</div>
 				</div>
 			</a>
+			{% endif %}
+    	{% endfor %}
 		</div>
 		<a href="" class="btn-primary">Ver mais</a>
 	</section>

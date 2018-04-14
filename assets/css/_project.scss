@@ -1,32 +1,66 @@
-.project-single {
-    h1 {
-      color: $color__main;
+.project-single{
+
+    @media screen and (min-width: $screen-sm) and (max-width: $screen-sm-max){
+        padding: 0 15px;
     }
-}
-.return {
-  display: none;
-}
-@include media-breakpoint-up(lg) {
-    .return {
-        float: left;
-        display: block;
-        margin-left: -100px;
-        margin-top: -10px;
-        a img {
-          height: 38px;
+
+    @media screen and (max-width: $screen-xs-max){
+        padding: 0 10px;
+    }
+    
+    p{
+        font-family: $lora;
+        font-size: 18px;
+        line-height: 30px;
+        color: #3d3d3d;
+        text-align: left;
+        margin-bottom: 120px;
+
+        img{
+            width: 100%;
         }
+
+        @media screen and (min-width: $screen-md) and (max-width: $screen-md-max){
+            margin-bottom: 60px;
+        }
+
+        @media only screen and (max-width: $screen-sm-max){
+            margin-bottom: 40px;
+        }
+    }
+
+    p:last-child{
+        margin-bottom: 0;
     }
 }
 
-//Latest Projects Page
-#lastest-projects .project-single {
-    padding: 80px 0;
-    border-bottom: solid 1px $color__light_gray;
-    &:nth-child(2) {
-        padding-top: 0;
+.project-info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.project-info-item{
+    max-width: 30%;
+
+    p{
+        text-align: center;  
     }
-    &:last-child {
-        padding-bottom: 0;
-        border-bottom: none;
-    }
+}
+
+.project-info-title{
+    font-family: $montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 6;
+    color: #a7a7a7;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.project-info-text{
+    font-family: $lora;
+    font-size: 18px;
+    line-height: 30px;
+    color: #3d3d3d;
 }
