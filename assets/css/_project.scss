@@ -1,13 +1,4 @@
 .project-single{
-
-    @media screen and (min-width: $screen-sm) and (max-width: $screen-sm-max){
-        padding: 0 15px;
-    }
-
-    @media screen and (max-width: $screen-xs-max){
-        padding: 0 10px;
-    }
-    
     p{
         font-family: $lora;
         font-size: 18px;
@@ -24,7 +15,7 @@
             margin-bottom: 60px;
         }
 
-        @media only screen and (max-width: $screen-sm-max){
+        @media screen and (max-width: $screen-sm-max){
             margin-bottom: 40px;
         }
     }
@@ -38,6 +29,10 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
+
+    @media screen and (max-width: $screen-xs-max){
+        flex-wrap: wrap;
+    }
 }
 
 .project-info-item{
@@ -46,16 +41,32 @@
     p{
         text-align: center;  
     }
+
+    @media screen and (max-width: $screen-xs-max){
+        width: 100%;
+        max-width: initial;
+    }
+}
+
+.project-info-item + .project-info-item{
+    @media screen and (max-width: $screen-xs-max){
+        margin-top: 40px;
+    }
 }
 
 .project-info-title{
     font-family: $montserrat;
     font-size: 16px;
     font-weight: 600;
-    letter-spacing: 6;
+    letter-spacing: 6px;
     color: #a7a7a7;
     text-transform: uppercase;
     margin-bottom: 40px;
+
+    @media screen and (max-width: $screen-xs-max){
+        margin-bottom: 20px;
+    }
+
 }
 
 .project-info-text{

@@ -6,12 +6,19 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	@media screen and (max-width: $screen-xs-max){
+		flex-wrap: wrap;
+	}
 }
 
 .post-card{
 	background: $color-white;
 	width: 330px;
 	/*height: 430px;*/
+
+	@media screen and (max-width: $screen-xs-max){
+		width: 100%;
+	}
 
 }
 
@@ -20,6 +27,11 @@
 
 	@media screen and (max-width: $screen-md-max){
 		margin-left: 30px;
+	}
+
+	@media screen and (max-width: $screen-xs-max){
+		margin-left: 0px;
+		margin-top: 50px;
 	}
 }
 

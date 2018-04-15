@@ -12,6 +12,7 @@
 
 		@media only screen and (max-width: $screen-sm-max){
 		    padding-bottom: 40px;
+            flex-wrap: wrap;
 		}
 	}
 
@@ -30,6 +31,10 @@
 	.item-contact-info{
 		text-align: center;
 
+        @media only screen and (max-width: $screen-sm-max){
+            width: 100%;
+        }
+
 		img{
 			height: 70px;
 			margin-bottom: 40px;
@@ -42,6 +47,12 @@
 			color: #666666;
 		}
 	}
+    
+    .item-contact-info + .item-contact-info{
+        @media only screen and (max-width: $screen-sm-max){
+            margin-top: 50px;
+        }
+    }
 
 	.btn-primary{
 		float: right;
@@ -76,6 +87,11 @@
 
 .box-contact{
     width: 30%;
+
+    @media screen and (max-width: $screen-sm-max){
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 .mod-label{

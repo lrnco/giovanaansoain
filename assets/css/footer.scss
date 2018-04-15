@@ -12,7 +12,7 @@
 			justify-content: space-between;
 		}
 
-		@media only screen and (max-width: $screen-xs-max){
+		@media screen and (max-width: $screen-xs-max){
 			flex-wrap: wrap;
 		}
 	}
@@ -28,7 +28,7 @@
 	    align-items: center;
 	    justify-content: space-between;
 
-	    @media only screen and (max-width: $screen-xs-max){
+	    @media screen and (max-width: $screen-xs-max){
 			flex-wrap: wrap-reverse;
 		}
 	}
@@ -41,9 +41,9 @@
 		color: #525252;
 	}
 
-	.list-social-medial{
+	.list-social-media{
 		
-		@media only screen and (max-width: $screen-xs-max){
+		@media screen and (max-width: $screen-xs-max){
 			margin-bottom: 20px;
 		}
 	}
@@ -79,6 +79,10 @@
 	strong{
 		font-weight: normal;
 	}
+
+	@media screen and (max-width: $screen-xs-max){
+		text-align: center;
+    }
 }
 
 .list-map-site:nth-child(2){
@@ -86,7 +90,27 @@
 	font-size: 13px;
 	letter-spacing: 1px;
 	line-height: 2.15;
-	text-transform: uppercase;;
+	text-transform: uppercase;
+
+	@media screen and (max-width: $screen-xs-max){
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.item-map:after {
+	        margin: 15px;
+	        content: "|";
+	        font-family: $montserrat;
+	        font-size: 13px;
+	        color: $color-white;
+	    }
+
+	    .item-map:last-child:after {
+	        content:"";
+	        margin: 0;
+	    }
+    }
 }
 
 .list-map-site:nth-child(3){
@@ -98,6 +122,12 @@
 	.item-map{
 		margin-bottom: 13px;
 	}
+
+	@media screen and (max-width: $screen-xs-max){    
+		display: inline-flex;
+	    width: 100%;
+	    justify-content: space-between;
+    }
 }
 
 .logo-map{
@@ -110,4 +140,8 @@
     width: 110px;
     height: 47px;
     margin-bottom: 25px;
+
+    @media screen and (max-width: $screen-xs-max){
+		width: 100%;
+    }
 }

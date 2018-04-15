@@ -39,14 +39,17 @@
 
 .wrapper-projects{
     margin: 60px 0;
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 0;
-    -ms-grid-columns: 33.3% 33.3% 33.3%;
-    grid-template-columns: 33.3% 33.3% 33.3%;
-    grid-template-areas: 
-                        'a b c' 
-                        'a d e';
+    
+    @media screen and (min-width: $screen-md){
+        display: -ms-grid;
+        display: grid;
+        grid-gap: 0;
+        -ms-grid-columns: 33.3% 33.3% 33.3%;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-areas: 
+                            'a b c' 
+                            'a d e';
+    }
 
     .projects{
     	position: relative;
@@ -67,30 +70,35 @@
 .wrapper-projects .a .projects{
     height: 960px;
 
-    @media screen and (max-width: $screen-md-max){
+    @media screen and (min-width: $screen-md) and (max-width: $screen-md-max){
         height: 600px;
+    }
+
+    @media screen and (max-width: $screen-sm-max){
+        height: 300px;
     }
 }
 
+@media screen and (min-width: $screen-md){
+    .wrapper-projects>.a{
+        grid-area: a;
+    }
 
-.wrapper-projects>.a{
-    grid-area: a;
-}
+    .wrapper-projects>.b{
+        grid-area: b;
+    }
 
-.wrapper-projects>.b{
-    grid-area: b;
-}
+    .wrapper-projects>.c{
+        grid-area: c;
+    }
 
-.wrapper-projects>.c{
-    grid-area: c;
-}
+    .wrapper-projects>.d{
+        grid-area: d;
+    }
 
-.wrapper-projects>.d{
-    grid-area: d;
-}
-
-.wrapper-projects>.e{
-    grid-area: e;
+    .wrapper-projects>.e{
+        grid-area: e;
+    }
 }
 
 .wrapper-title-projects{
@@ -124,5 +132,20 @@
             font-size: 15px;
             line-height: 27px;
         }
+    }
+}
+
+@media screen and (max-width: $screen-sm-max){
+    .wrapper-projects{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .wrapper-projects>a{
+        width: 50%;
+    }
+
+    .wrapper-projects>a:first-child{
+        width: 100%;
     }
 }
