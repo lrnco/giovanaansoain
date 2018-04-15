@@ -13,8 +13,8 @@ layout: default
 				<h2 class="banner-title">Assessoria de inovação</h2>
 				<p class="banner-subtitle">Buscamos soluções criativas com processo de design para criar inovação.</p>
 				<div class="row-buttons">
-					<a href="{{ site.baseurl }}/about" class="btn-secondary">Sobre mim</a>
-					<a href="{{ site.baseurl }}/contact" class="btn-primary">Fale Comigo</a>
+					<a href="{{ site.baseurl }}about" class="btn-secondary">Sobre mim</a>
+					<a href="{{ site.baseurl }}contact" class="btn-primary">Fale Comigo</a>
 				</div>
 			</div>
 			<div class="banner-box-bottom">
@@ -73,41 +73,41 @@ layout: default
 		{% assign projects = site.projects | sort: 'order' %}
 	    {% for project in projects %}
 	      	{% if project.type == 'latest' %}
-			<a href="{{ site.baseurl }}/{{ project.permalink }}" class="a">
+			<a href="{{ site.baseurl }}{{ project.permalink }}" class="a">
 				<div class="projects">
-					<img src="{{ site.baseurl }}/upload/{{ project.image }}" alt="">
+					<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
 					<div class="wrapper-title-projects">
 						<p class="title-project">{{ project.title }}</p>	
 					</div>
 				</div>
 			</a>
-			<a href="{{ site.baseurl }}/{{ project.permalink }}" class="b">
+			<a href="{{ site.baseurl }}{{ project.permalink }}" class="b">
 				<div class="projects">
-					<img src="{{ site.baseurl }}/upload/{{ project.image }}" alt="">
+					<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
 					<div class="wrapper-title-projects">
 						<p class="title-project">{{ project.title }}</p>	
 					</div>
 				</div>
 			</a>
-			<a href="{{ site.baseurl }}/{{ project.permalink }}" class="c">
+			<a href="{{ site.baseurl }}{{ project.permalink }}" class="c">
 				<div class="projects">
-					<img src="{{ site.baseurl }}/upload/{{ project.image }}" alt="">
+					<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
 					<div class="wrapper-title-projects">
 						<p class="title-project">{{ project.title }}</p>	
 					</div>
 				</div>
 			</a>
-			<a href="{{ site.baseurl }}/{{ project.permalink }}" class="d">
+			<a href="{{ site.baseurl }}{{ project.permalink }}" class="d">
 				<div class="projects">
-					<img src="{{ site.baseurl }}/upload/{{ project.image }}" alt="">
+					<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
 					<div class="wrapper-title-projects">
 						<p class="title-project">{{ project.title }}</p>	
 					</div>
 				</div>
 			</a>
-			<a href="{{ site.baseurl }}/{{ project.permalink }}" class="e">
+			<a href="{{ site.baseurl }}{{ project.permalink }}" class="e">
 				<div class="projects">
-					<img src="{{ site.baseurl }}/upload/{{ project.image }}" alt="">
+					<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
 					<div class="wrapper-title-projects">
 						<p class="title-project">{{ project.title }}</p>	
 					</div>
@@ -264,7 +264,7 @@ layout: default
 	<!-- call to action -->
 	<section class="call-to-action">
 		<h4 class="title-cta">Pronto para inovar?</h4>
-		<a href="{{ site.baseurl }}/contact" class="btn-cta">Vamos falar</a>
+		<a href="{{ site.baseurl }}contact" class="btn-cta">Vamos falar</a>
 	</section>
 
 	<!-- blog -->

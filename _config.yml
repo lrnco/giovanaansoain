@@ -17,7 +17,7 @@ collections:
 email: ola@giovana.cc
 description: Giovana Ansoain Portfolio. Buscamos soluções criativas com processo de design para criar inovação.
 meta_keywords: "assessoria, agilidade, inovacao"
-baseurl: ''
+baseurl: 'giovanaansoain/'
 url: 'https://giovana.cc/'
 markdown: kramdown
 plugins:
