@@ -22,7 +22,7 @@ description: Giovana Ansoain Portfolio. Buscamos soluções criativas com proces
   design para criar inovação.
 meta_keywords: assessoria, agilidade, inovacao
 baseurl: ''
-url: 'https://dutra21.github.io/giovanaansoain/'
+url: https://dutra21.github.io/giovanaansoain/
 markdown: kramdown
 plugins:
 - jekyll-feed
