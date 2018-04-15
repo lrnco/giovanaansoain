@@ -15,11 +15,10 @@ collections:
     title: Uploads
     output: true
 email: ola@giovana.cc
-description: Giovana Ansoain Portfolio
-meta_description: "Desenvolvedor Front-end/Wordpress, Design Responsivo, HTML5, CSS3 e JavaScript"
-meta_keywords: "site, website, front-end, html5, css3, javascript, jquery, seo, otimizacao, performance"
+description: Giovana Ansoain Portfolio. Buscamos soluções criativas com processo de design para criar inovação.
+meta_keywords: "assessoria, agilidade, inovacao"
 baseurl: ''
-url: ''
+url: 'https://giovana.cc/'
 markdown: kramdown
 plugins:
 - jekyll-feed
