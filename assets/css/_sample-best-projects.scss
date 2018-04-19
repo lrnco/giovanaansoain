@@ -23,17 +23,18 @@
 	}
 }
 
-.item-filter-projects>a{
+.item-filter-projects>span{
 	font-family: $montserrat;
 	font-size: 12px;
 	font-weight: 600;
 	letter-spacing: 2.4px;
 	text-align: center;
 	text-transform: uppercase;
-	color: $color-subtitle;
+    color: $color-subtitle;
+    cursor: pointer;
 }
 
-.item-filter-projects.active>a{
+.item-filter-projects.active>span{
 	color: #db2c1f;
 }
 
@@ -65,6 +66,11 @@
 	    height: 100%;
 	    object-fit: cover;
 	}
+}
+ 
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
 }
 
 .wrapper-projects .a .projects{
