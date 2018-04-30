@@ -111,7 +111,7 @@
     height: 100px;
     resize: none;
     background: transparent;
-    color: #db2c1f;
+    color: $color-black;
     @include placeColor(#a7a7a7);
 
     &::-webkit-input-placeholder {
@@ -133,7 +133,7 @@
 }
 
 .mod-textarea:focus{
-	border-color: #db2c1f;
+	border-color: $color-black;
 }
 
 .mod-input{
@@ -144,7 +144,7 @@
     border: none;
     border-bottom: 1px solid #a7a7a7;
     background: transparent;
-    color: #db2c1f;
+    color: $color-black;
     @include placeColor(#a7a7a7);
 
     &.error{
@@ -176,7 +176,7 @@
 }
 
 .mod-input:focus{
-	border-color: #db2c1f;
+	border-color: $color-black;
 }
 
 span.error{

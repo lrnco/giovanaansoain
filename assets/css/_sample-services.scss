@@ -15,7 +15,8 @@
 	width: calc( 100% / 3 - 3%);
 
 	@media screen and (max-width: $screen-xs-max){
-		width: 100%;
+		width: 90%;
+    	margin: 0 auto;
 	}
 }
 

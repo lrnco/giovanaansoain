@@ -1,6 +1,11 @@
 .call-to-action{
 	background: $color-red;
 	text-align: center;
+	height: 359px;
+
+	@media screen and (max-width: $screen-md-max){
+	    height: 234px;
+	}
 }
 
 .title-cta{
@@ -9,6 +14,7 @@
 	font-weight: 600;
 	text-align: center;
 	color: #fefefe;
+	margin-bottom: 40px;
 
 	@media only screen and (min-width: $screen-sm) and (max-width: $screen-sm-max){
 		font-size: 25px;

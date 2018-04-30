@@ -16,12 +16,21 @@
 			flex-wrap: wrap;
 		}
 	}
+
+	@media screen and (max-width: $screen-xs-max){
+		padding-bottom: 40px;
+	}
 }
 
 .footer-bottom{
 	background: #1c1c1c;
 	padding-top: 30px;
     padding-bottom: 30px;
+
+    @media screen and (max-width: $screen-xs-max){
+		padding-top: 40px;
+    	padding-bottom: 80px;
+	}
 
 	.container{
 		display: flex;
@@ -39,12 +48,16 @@
 		font-weight: 300;
 		line-height: 2.17;
 		color: #525252;
+
+		@media screen and (max-width: $screen-xs-max){
+			text-align: center;
+		}
 	}
 
 	.list-social-media{
 		
 		@media screen and (max-width: $screen-xs-max){
-			margin-bottom: 20px;
+			margin-bottom: 40px;
 		}
 	}
 }
@@ -66,7 +79,7 @@
 
 	@media screen and (max-width: $screen-xs-max) {
 		margin-left: 0;
-		margin-top: 30px;
+		margin-top: 40px;
 	}
 }
 
@@ -88,12 +101,14 @@
 .list-map-site:nth-child(2){
 	font-family: $montserrat;
 	font-size: 13px;
+	font-weight: 300;
 	letter-spacing: 1px;
 	line-height: 2.15;
 	text-transform: uppercase;
 
 	@media screen and (max-width: $screen-xs-max){
-		width: 100%;
+		width: 300px;
+    	margin: 40px auto 0 auto;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -106,6 +121,11 @@
 	        color: $color-white;
 	    }
 
+	    .item-map:nth-child(3):after{
+	        content: "";
+	        margin: 0;
+	    }
+
 	    .item-map:last-child:after {
 	        content:"";
 	        margin: 0;
@@ -116,6 +136,7 @@
 .list-map-site:nth-child(3){
 	font-family: $montserrat;
 	font-size: 16px;
+	font-weight: 300;
 	letter-spacing: 1.3px;
 	line-height: 2;
 
@@ -124,9 +145,8 @@
 	}
 
 	@media screen and (max-width: $screen-xs-max){    
-		display: inline-flex;
 	    width: 100%;
-	    justify-content: space-between;
+	    text-align: center;
     }
 }
 
