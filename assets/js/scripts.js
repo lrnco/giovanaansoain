@@ -124,4 +124,68 @@ $(document).ready(function(){
 		$( '.success' ).find('p').html( message || 'Ops!<br> Ocorreu um erro,<br> tente mais tarde.' );
 		$( '.success' ).fadeIn();
 	}
+
+	function filter(tag) {
+		setActiveTag(tag);
+		showContainer(tag);
+	}
+
+	function setActiveTag(tag) {
+		// loop through all items and remove active class
+		var items = $('.item-filter-projects');
+		for (var i = 0; i < items.length; i++) {
+			items[i].setAttribute('class', 'item-filter-projects');
+		}
+
+		// set the selected tag's item to active
+		var item = $('#' + tag + '-item');
+		if (item) {
+			item[0].setAttribute('class', 'item-filter-projects active');
+		}
+	}
+
+	function showContainer(tag) {
+		// loop through all lists and hide them
+		var lists = $('.wrapper-projects');
+		for (var i = 0; i < lists.length; i++) {
+			lists[i].setAttribute('class', 'wrapper-projects hidden');
+		}
+
+		// remove the hidden class from the list corresponding to the selected tag
+		var list = $('#' + tag + '-container');
+		if (list) {
+			list[0].setAttribute('class', 'wrapper-projects');
+		}
+	}
+
+	$('.item-filter-projects').click(function(e) {
+		filter(e.target.innerText.toLowerCase());
+	});
+
+
+
+
+	var filtro = 6;
+	var add = 6;
+
+	function showProjects(filt) {
+		const tagNode = $('.item-filter-projects.active')[0];
+		console.log(tagNode);
+		const tag = tagNode.id.replace('-item', '');
+		console.log(tag);
+		// console.log(tags.hasClass('active'));
+		// loop through all lists and hide them
+		var lists = $('.projetos-loop');
+		for (var i = 0; i < filt + 1; i++) {
+			console.log('.projeto-' + tag + i);
+			$('.projeto-' + tag + '-' + i).removeClass('hidden');
+		}
+	}
+
+
+	$('.item-vermais-projects').click(function(e) {
+		showProjects(filtro + add);
+		filtro += add;
+	});	
+
 });

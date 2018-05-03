@@ -61,62 +61,80 @@ layout: default
 		<p class="section-subtitle">Cada um conta uma história e uma trajetória. Confira!</p>
 
 		<ul class="list-filter-projects">
-			<li class="item-filter-projects"><a href="">All</a></li>
-			<li class="item-filter-projects active"><a href="">Digital</a></li>
-			<li class="item-filter-projects"><a href="">Branding</a></li>
-			<li class="item-filter-projects"><a href="">Marketing</a></li>
-			<li class="item-filter-projects"><a href="">Video</a></li>
-			<li class="item-filter-projects"><a href="">Photo</a></li>
+			<li id="all-item" class="item-filter-projects active"><span>All</span></li>
+			{% assign rawtags = "" %}
+			{% for post in site.projects %}
+				{% assign ttags = post.tags | join:'|' | append:'|' %}
+				{% assign rawtags = rawtags | append:ttags %}
+			{% endfor %}
+			{% assign rawtags = rawtags | split:'|' | sort %}
+
+			{% assign site.tags = "" %}
+			{% for tag in rawtags %}
+				{% if tag != "" %}
+					{% if tags == "" %}
+						{% assign tags = tag | split:'|' %}
+					{% endif %}
+					{% unless tags contains tag %}
+						{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+					{% endunless %}
+				{% endif %}
+			{% endfor %}
+
+			{% for tag in tags %}
+				{% if tag != "" %}
+					{% assign t = tag | first %}
+					{% assign posts = tag | last %}
+					<li id="{{ tag }}-item" class="item-filter-projects"><span>{{ tag }}</span></li>
+				{% endif %}
+			{% endfor %}
 		</ul>
 
-		<div class="wrapper-projects">
+		<div id="all-container" class="wrapper-projects">
 		{% assign projects = site.projects | sort: 'order' %}
-	    {% for project in projects %}
-	      	{% if project.type == 'latest' %}
-			<a href="{{ site.baseurl }}{{ project.permalink }}" class="a">
+		{% for project in projects %}
+			{% assign isbig = forloop.index | modulo:9 %}
+			{% assign isbig2 = forloop.index | modulo:11 %}
+			<a href="{{ site.baseurl }}{{ project.permalink }}" class="
+				projetos-loop 
+				projeto-all-{{forloop.index}} 
+				{% if forloop.index > 6 %}hidden{% endif %} 
+				{% if forloop.index == 1 or isbig == 0 or isbig2 == 0 %}big{% endif %}
+			">
 				<div class="projects">
 					<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
 					<div class="wrapper-title-projects">
-						<p class="title-project">{{ project.title }}</p>	
+						<p class="title-project">{{ project.title }}</p>
 					</div>
 				</div>
 			</a>
-			<a href="{{ site.baseurl }}{{ project.permalink }}" class="b">
-				<div class="projects">
-					<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
-					<div class="wrapper-title-projects">
-						<p class="title-project">{{ project.title }}</p>	
-					</div>
-				</div>
-			</a>
-			<a href="{{ site.baseurl }}{{ project.permalink }}" class="c">
-				<div class="projects">
-					<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
-					<div class="wrapper-title-projects">
-						<p class="title-project">{{ project.title }}</p>	
-					</div>
-				</div>
-			</a>
-			<a href="{{ site.baseurl }}{{ project.permalink }}" class="d">
-				<div class="projects">
-					<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
-					<div class="wrapper-title-projects">
-						<p class="title-project">{{ project.title }}</p>	
-					</div>
-				</div>
-			</a>
-			<a href="{{ site.baseurl }}{{ project.permalink }}" class="e">
-				<div class="projects">
-					<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
-					<div class="wrapper-title-projects">
-						<p class="title-project">{{ project.title }}</p>	
-					</div>
-				</div>
-			</a>
-			{% endif %}
     	{% endfor %}
 		</div>
-		<a href="" class="btn-primary">Ver mais</a>
+		{% for tag in tags %}
+			{% if tag != "" %}
+				<div id="{{ tag }}-container" class="wrapper-projects hidden">
+				{% assign projects = site.projects | sort: 'order' | where: 'tags',tag %}
+				{% for project in projects %}
+				{% assign isbig = forloop.index | modulo:9 %}
+				{% assign isbig2 = forloop.index | modulo:11 %}
+					<a href="{{ site.baseurl }}{{ project.permalink }}" class="
+						projetos-loop 
+						projeto-{{tag}}-{{forloop.index}} 
+						{% if forloop.index > 6 %}hidden{% endif %} 
+						{% if forloop.index == 1 or isbig == 0 or isbig2 == 0 %}big{% endif %}
+					">
+						<div class="projects">
+							<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
+							<div class="wrapper-title-projects">
+								<p class="title-project">{{ project.title }}</p>
+							</div>
+						</div>
+					</a>
+				{% endfor %}
+				</div>
+			{% endif %}
+		{% endfor %}
+		<button class="btn-primary item-vermais-projects">Ver mais</button>
 	</section>
 
 	<!-- cooperation -->
