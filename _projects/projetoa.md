@@ -1,8 +1,8 @@
 ---
 title: Projeto a
 permalink: projetoa
-tags: 
-- branding 
+tags:
+- branding
 - video
 subtitle: Como melhorar meu SEO?
 layout: project

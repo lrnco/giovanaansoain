@@ -1,7 +1,7 @@
 ---
 title: Projeto c
 permalink: projetoc
-tags: 
+tags:
 - marketing
 subtitle: Como melhorar meu SEO?
 layout: project

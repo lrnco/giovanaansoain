@@ -1,7 +1,7 @@
 ---
 title: Projeto b
 permalink: projetob
-tags: 
+tags:
 - photo
 subtitle: Como melhorar meu SEO?
 layout: project
