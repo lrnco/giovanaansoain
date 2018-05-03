@@ -39,7 +39,8 @@
     max-width: 30%;
 
     p{
-        text-align: center;  
+        text-align: center; 
+        text-transform: capitalize; 
     }
 
     @media screen and (max-width: $screen-xs-max){

@@ -4,7 +4,7 @@ permalink: sebrae-empreendedorismo
 tags:
 - mentoria
 layout: project
-image: otimizar-o-atendimento.jpg
+image: sebrae-empreendedorismo.jpg
 period: Novembro, 2017
 client: Sebrae
 city: São Paulo
