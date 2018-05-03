@@ -125,7 +125,6 @@ $(document).ready(function(){
 		$( '.success' ).fadeIn();
 	}
 
-
 	function filter(tag) {
 		setActiveTag(tag);
 		showContainer(tag);
@@ -162,6 +161,31 @@ $(document).ready(function(){
 	$('.item-filter-projects').click(function(e) {
 		filter(e.target.innerText.toLowerCase());
 	});
-	
+
+
+
+
+	var filtro = 6;
+	var add = 6;
+
+	function showProjects(filt) {
+		const tagNode = $('.item-filter-projects.active')[0];
+		console.log(tagNode);
+		const tag = tagNode.id.replace('-item', '');
+		console.log(tag);
+		// console.log(tags.hasClass('active'));
+		// loop through all lists and hide them
+		var lists = $('.projetos-loop');
+		for (var i = 0; i < filt + 1; i++) {
+			console.log('.projeto-' + tag + i);
+			$('.projeto-' + tag + '-' + i).removeClass('hidden');
+		}
+	}
+
+
+	$('.item-vermais-projects').click(function(e) {
+		showProjects(filtro + add);
+		filtro += add;
+	});	
 
 });

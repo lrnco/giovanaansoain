@@ -92,8 +92,15 @@ layout: default
 
 		<div id="all-container" class="wrapper-projects">
 		{% assign projects = site.projects | sort: 'order' %}
-	    {% for project in projects %}
-			<a href="{{ site.baseurl }}{{ project.permalink }}">
+		{% for project in projects %}
+			{% assign isbig = forloop.index | modulo:9 %}
+			{% assign isbig2 = forloop.index | modulo:11 %}
+			<a href="{{ site.baseurl }}{{ project.permalink }}" class="
+				projetos-loop 
+				projeto-all-{{forloop.index}} 
+				{% if forloop.index > 6 %}hidden{% endif %} 
+				{% if forloop.index == 1 or isbig == 0 or isbig2 == 0 %}big{% endif %}
+			">
 				<div class="projects">
 					<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
 					<div class="wrapper-title-projects">
@@ -106,23 +113,28 @@ layout: default
 		{% for tag in tags %}
 			{% if tag != "" %}
 				<div id="{{ tag }}-container" class="wrapper-projects hidden">
-				{% assign projects = site.projects | sort: 'order' %}
+				{% assign projects = site.projects | sort: 'order' | where: 'tags',tag %}
 				{% for project in projects %}
-					{% if project.tags contains tag %}
-						<a href="{{ site.baseurl }}{{ project.permalink }}">
-							<div class="projects">
-								<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
-								<div class="wrapper-title-projects">
-									<p class="title-project">{{ project.title }}</p>
-								</div>
+				{% assign isbig = forloop.index | modulo:9 %}
+				{% assign isbig2 = forloop.index | modulo:11 %}
+					<a href="{{ site.baseurl }}{{ project.permalink }}" class="
+						projetos-loop 
+						projeto-{{tag}}-{{forloop.index}} 
+						{% if forloop.index > 6 %}hidden{% endif %} 
+						{% if forloop.index == 1 or isbig == 0 or isbig2 == 0 %}big{% endif %}
+					">
+						<div class="projects">
+							<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
+							<div class="wrapper-title-projects">
+								<p class="title-project">{{ project.title }}</p>
 							</div>
-						</a>
-					{% endif %}
+						</div>
+					</a>
 				{% endfor %}
 				</div>
 			{% endif %}
 		{% endfor %}
-		<a href="" class="btn-primary">Ver mais</a>
+		<button class="btn-primary item-vermais-projects">Ver mais</button>
 	</section>
 
 	<!-- cooperation -->
