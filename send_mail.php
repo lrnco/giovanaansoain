@@ -69,7 +69,7 @@
 	if($enviaremail){
 		$mgm = "Mensagem enviada com sucesso";
 	} else {
-		$mgm = "Não foi possivel enviar e-mail";
+		$mgm = "Não foi possivel enviar sua mensagem";
 		echo "";
 	}
 ?>
