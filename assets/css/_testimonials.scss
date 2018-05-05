@@ -1,4 +1,8 @@
 .slider-testimonials{
+	display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
 	@media screen and (min-width: $screen-md){
         margin-top: 90px;
     }
@@ -42,8 +46,8 @@
 
 .text-slider{
 	font-family: $lora;
-	font-size: 18px;
-	line-height: 1.78;
+	font-size: 16px;
+	line-height: 1.6;
 
 	@media only screen and (max-width: $screen-sm-max){
 		font-size: 14px;
@@ -51,20 +55,21 @@
 }
 
 .info-text{
-	display: inline-flex;
 	margin-top: 20px;
+	width: 100%;
 
-	@media only screen and (max-width: $screen-sm-max){
-		flex-wrap: wrap;
-	}
-
-	span{
-		margin: 0 5px;
-		font-family: $lora;
-		font-size: 13px;
+	p{
 		display: flex;
-    	align-items: center;
+    	flex-wrap: wrap;
 	}
+}
+
+span.space-text{
+	margin: 0 5px;
+	font-family: $lora;
+	font-size: 13px;
+	display: flex;
+	align-items: center;
 }
 
 .info-name{

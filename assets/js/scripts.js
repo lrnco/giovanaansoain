@@ -15,22 +15,26 @@ $(document).ready(function(){
 	});
 
 	// slider
-	$('.slider-testimonials').slick({
-		dots: true,
-		infinite: true,
-		speed: 300,
-		slidesToShow: 2,
-		slidesToScroll: 2,
-		responsive: [
-	    {
-	      breakpoint: 991,
-	      settings: {
-	        slidesToShow: 1,
-	        slidesToScroll: 1
-	      }
-	    }
-	 	]
-	});
+
+	if($('.box-slider').length > 1){
+		$('.slider-testimonials').slick({
+			dots: true,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 2,
+			slidesToScroll: 2,
+			responsive: [
+		    {
+		      breakpoint: 991,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+		 	]
+		});
+	}
+	
 
 	//form contato
 	var formContact 	= $('.form');
@@ -42,7 +46,7 @@ $(document).ready(function(){
 		}
     } );
 	
-	$('.f-name').mask('(00) 000 000 000');
+	$('.f-phone').mask('(00) 000 000 000');
 
 	function validateForm(){
 		var _toogle = false;
@@ -58,7 +62,7 @@ $(document).ready(function(){
 				data: datastring,
 				dataType: "json",
 				success: function(resp) {
-					// console.log(resp.error)
+					console.log(resp.error)
 
 					if (!resp.error){
 						$( '.success' ).find('p').html( '' );
@@ -75,8 +79,6 @@ $(document).ready(function(){
 					onError();
 				}
 			});
-
-			formContact.find('button').html('aguarde');
 		
 			_toogle = true;
 
