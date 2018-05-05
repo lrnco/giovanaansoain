@@ -62,14 +62,15 @@ header{
         }
     }
 
-    .list-social-medial{
-        @media screen and (max-width: $screen-sm-max){
-            display: none;
-        }
+    .list-social-media{
+        list-style: none;
+        list-style-position: inside;
     }
 }
 
 .nav-list{
+    list-style: none;
+    list-style-position: inside;
 
     @media screen and (min-width: $screen-md){
         display: inline-flex;

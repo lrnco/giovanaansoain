@@ -115,6 +115,8 @@ $(document).ready(function(){
 		},
 	});
 
+	//tags
+
 	function filter(tag) {
 		setActiveTag(tag);
 		showContainer(tag);

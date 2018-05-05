@@ -55,6 +55,8 @@
 	}
 
 	.list-social-media{
+		list-style: none;
+		list-style-position: inside;
 		
 		@media screen and (max-width: $screen-xs-max){
 			margin-bottom: 40px;
@@ -64,6 +66,8 @@
 
 .list-map-site{
 	max-width: 300px;
+	list-style: none;
+	list-style-position: inside;
 
 	@media screen and (min-width: $screen-sm) and (max-width: $screen-sm-max) {
 		max-width: 275px;
