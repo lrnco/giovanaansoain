@@ -60,7 +60,7 @@ $(document).ready(function(){
 				$.ajax({
 
 					type: "POST",
-					url: 'https://dutra21.github.io/giovanaansoain/send_mail.php',
+					url: GLOBAL_URL + 'send_mail.php',
 					data: datastring,
 					dataType: "json",
 					success: function(data) {
