@@ -60,7 +60,7 @@ $(document).ready(function(){
 				$.ajax({
 
 					type: "POST",
-					url: GLOBAL_URL + 'send_mail.php',
+					url: '../../send_mail.php',
 					data: datastring,
 					dataType: "json",
 					success: function(data) {
