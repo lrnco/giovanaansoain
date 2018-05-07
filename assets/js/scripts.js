@@ -49,38 +49,6 @@ $(document).ready(function(){
 	$('.f-phone').mask('(00) 000 000 000');
 
 	$('.form').validate({
-
-		submitHandler: function(form) {
-
-            var _toogle = false;
-
-            if (!_toogle) {
-		   		var datastring = $('.form').serialize();
-
-				$.ajax({
-
-					type: "POST",
-					url: GLOBAL_URL + 'send_mail.php',
-					data: datastring,
-					dataType: "json",
-					success: function(data) {
-					console.log(data)
-
-						$('.form').append('<p class="retorno">' + 'Sua mensagem foi enviada com sucesso' +
-						'<br>' + 'Em breve retornaremos' + '<br>' + '</p>');
-						
-					},
-					error: function() {
-
-						$('.form').append('<p class="retorno"> Ocorreu um erro, tente mais tarde. </p>');
-					}
-				});
-			
-				_toogle = true;
-
-			}
-
-		},
 		ignore: '.ignore',
 		errorElement: 'span',
 		rules: {

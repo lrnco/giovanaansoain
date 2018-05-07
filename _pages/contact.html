@@ -7,7 +7,7 @@ layout: default
 <main class="contact">
 	<!-- banner -->
 	<section class="banner banner-pages">
-		<img class="banner-img" src="{{ site.baseurl }}upload/header-img.jpg" alt="banner">
+		<img class="banner-img" src="{{ site.url }}upload/header-img.jpg" alt="banner">
 		<div class="banner-wrapper-info">
 			<div class="banner-box-center">
 				<h2 class="banner-title">Vamos nos conectar</h2>
@@ -23,25 +23,25 @@ layout: default
 		<div class="contact-info">
 			<div class="item-contact-info">
 				<a href="tel:+5511976757107">
-					<img src="{{ site.baseurl }}assets/icons/phone.svg" alt="">
+					<img src="{{ site.url }}assets/icons/phone.svg" alt="">
 					<p>+55 11 97675 7107</p>
 				</a>
 			</div>
 			<div class="item-contact-info">
 				<a href="mailto:ola@giovana.cc">
-					<img src="{{ site.baseurl }}assets/icons/email.svg" alt="">
+					<img src="{{ site.url }}assets/icons/email.svg" alt="">
 					<p>{{ site.email }}</p>
 				</a>
 			</div>
 			<div class="item-contact-info">
 				<a href="">
-					<img src="{{ site.baseurl }}assets/icons/location.svg" alt="">
+					<img src="{{ site.url }}assets/icons/location.svg" alt="">
 					<p>São Paulo, SP - Brasil</p>
 				</a>
 			</div>
 		</div>
 		<div class="contact-form">
-			<form class="form" action="" name="form_contato">
+			<form class="form" name="form_contato" netlify>
 				<div class="row wrapper-box">
 					<div class="box-contact">
 						<input type="text" class="mod-input" name="name" placeholder="Nome*" arial-label="Nome">
