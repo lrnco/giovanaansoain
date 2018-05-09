@@ -4,10 +4,12 @@
 		{% assign maxRelatedCounter  = 0 %}
 		
 		<div class="wrapper-related-projects">
-	    {% for post in site.projects %}
-	        {% if post.url != page.url %}
-	            {% if page.tag == site.tag %}
-	                <a href="{{ site.baseurl }}{{ project.permalink }}">
+		{% for tag in page.tags %}
+			<span>{{ tag }}</span>
+			{% assign projects = site.projects | sort: 'order' | where: 'tags',tag %}
+			{% for project in projects %}
+				{% if project.url != page.url and maxRelatedCounter < 8 %}
+				<a href="{{ site.baseurl }}{{ project.permalink }}">
 						<div class="projects">
 							<img src="{{ site.baseurl }}upload/{{ project.image }}" alt="">
 							<div class="wrapper-title-projects">
@@ -15,13 +17,10 @@
 							</div>
 						</div>
 					</a>
-	                {% assign maxRelatedCounter  = maxRelatedCounter | plus: 1 %}
-	                {% if maxRelatedCounter == 8 %}
-	                    {% break %}
-	                {% endif %}
-	            {% endif %}
-	        {% endif %}
-	    {% endfor %}
+					{% assign maxRelatedCounreter  = maxRelatedCounter | plus: 1 %}
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
 		</div>   	
 	</div>
 </section>
